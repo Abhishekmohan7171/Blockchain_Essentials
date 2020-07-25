@@ -1,0 +1,23 @@
+pragma solidity >=0.4.17 <0.7.0;
+
+contract Car{
+    string public owner;
+    string public cost;
+    string public model;
+    
+    function Car(string newOwner,string newCost,string newModel)public{
+        owner = newOwner;
+        cost = newCost;
+        model = newModel;
+    }
+    
+    function setDetails(string newOwner,string newCost,string newModel)public{
+        owner = newOwner;
+        cost = newCost;
+        model = newModel;
+    }
+    
+    function getDetails() public view returns(string,string,string){
+        return(owner,cost,model);
+    }
+}
