@@ -1,0 +1,31 @@
+pragma solidity >=0.4.17 <0.7.0;
+
+contract reportCard{
+    string public name;
+    uint public Rollno;
+    uint public Batch;
+    uint public marksEnglish;
+    uint public marksScience;
+    uint public marksMaths;
+    uint public marksSocial;
+    string public status;
+    
+    function reportCard(string studentname,uint studentRollno,uint studentBatch,uint studentmarksEnglish,uint studentmarksScience,uint studentmarksMaths,uint studentmarksSocial,string studentstatus)public{
+        name = studentname;
+        Rollno = studentRollno;
+        Batch = studentBatch;
+        marksEnglish = studentmarksEnglish;
+        marksScience = studentmarksScience;
+        marksMaths = studentmarksMaths;
+        marksSocial = studentmarksSocial;
+        status = studentstatus;
+        
+    }
+    
+    function getDetails() public view returns(string,uint,uint,uint,uint,uint,uint,string){
+        return(name,Rollno,Batch,marksEnglish,marksScience,marksMaths,marksSocial,status);
+    }
+}
+
+
+SMART CONTRACT ADDRESS:: https://ropsten.etherscan.io/tx/0xcf688582339b39734f72216748d06dd61a00287d4922e96515f22cf6a5b51d64
